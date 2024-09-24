@@ -1,0 +1,57 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black
+}
+.btn{
+    height:60px ;
+    width: 150px;
+     align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 30%;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgb(236, 236, 240);
+    overflow: hidden;
+
+}
+.btn::before{
+    content: '';
+    height: 310%;
+    width: 250%;
+    position: absolute;
+    filter: blur(8px);
+    animation: spin 2s linear infinite;
+
+}
+.btn:hover::before{
+    background-image: linear-gradient(6deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #ff00cb, #ff0000);
+
+}
+.btn::after{
+    content: " HOVER ME!";
+    background-color: black;
+    height: 50px;
+    width: 140px;
+    position: absolute;
+    color: white;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
